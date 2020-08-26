@@ -1,0 +1,76 @@
+.top {
+  margin: 0 auto;
+  margin-top: 50rpx;
+  background: #1da0ee;
+  color: #fff;
+  width: 50vw;
+  text-align: center
+ }
+  
+ .drawer_screen { 
+  width: 100%; 
+  height: 100%; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: 1000; 
+  background: #000; 
+  opacity: 0.5; 
+  overflow: hidden; 
+ } 
+   
+ /*content*/
+ .drawer_box { 
+  width:100%;
+  height:70%;
+  overflow:hidden;
+  position:fixed;
+  bottom:0%;
+  left:0%;
+  z-index:1001;
+  background:#FAFAFA;
+  margin-top:-150rpx;
+  border-radius:3px;
+  margin-left:-0rpx;
+ } 
+  
+ .modalBox {
+  padding: 60rpx;
+  font-size: 30rpx;
+ }
+
+ .modalQues {
+   text-align: center;
+   margin-top: 0rpx;
+ }
+  
+ .modalConf {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 20rpx; 
+ }
+  
+ .hidePick {
+  text-align: right;
+  margin-top: 50rpx;
+ }
+  
+ .hideModal {
+  color: #1da0ee;
+  margin-left: 130rpx;
+ }
+
+.topband-banner {
+  margin-top: 20rpx;
+}
+
+ .swiper-item {
+  display: block;
+  height: 150px;
+}
+
+.topband-richtext {
+  margin-top: 20rpx;
+  height: 100rpx;
+}
+

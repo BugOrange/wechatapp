@@ -1,0 +1,87 @@
+/* pages/orange/tablist/tablist.wxss */
+
+.tpb-list {
+  background-color: #f5f7fa;
+}
+.cell-contentview {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15rpx;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  height: 400rpx;
+  background-color: white;
+}
+.content-topview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 200rpx;
+
+}
+
+.content-centerview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+}
+.content-bottomview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+}
+
+.cell-image {
+  width: 200rpx;
+  height: 150rpx;
+}
+.paybutton {
+  text-align: center;
+  color: white;
+  border-radius: 30rpx;
+  height: 60rpx;
+  width: 120rpx;
+  background-color: #fc8221;
+}
+
+
+
+.cell-paytime {
+  display: flex;
+  width: 70%;
+  align-items: center;
+}
+
+.cell-paystatus {
+  margin-right: 20rpx;
+}
+
+.text-time {
+  font-size: 30rpx;
+  color: black;
+}
+
+.countView {
+  display: flex;
+  width: 30%;
+}
+.text-timecount {
+  margin-right: 20rpx;
+  text-align: right;
+  font-size: 25rpx;
+  width: 100%;
+  color: black;
+}
+
+.time-item {
+  color: #fc8221;
+}

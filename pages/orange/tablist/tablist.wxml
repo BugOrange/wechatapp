@@ -1,0 +1,44 @@
+<van-tabs sticky swipeable color="#fc8428">
+	<van-tab title="全部订单">
+
+		<van-cell-group custom-class="tpb-list">
+			<view class="cell-contentview" wx:for="{{listArray}}" wx:key="*this">
+				<view class="content-topview">
+					<cover-image class="cell-image" src="https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2964062487,143696455&fm=58&s=3A63CA1684218D03104BF2DC0200C0BA&bpow=121&bpoh=75"></cover-image>
+					<view class="cell-detailview">
+						<view style="width : 100%; text-align: left">深圳华子大酒店{{item}} </view>
+						<view style="width : 100%; text-align: left">高级大床房</view>
+						<view style="width : 100%; text-align: left">
+							<text style="color:#393a39">￥<text style="color:#f70000">899</text></text>
+						</view>
+					</view>
+					<view class="cell-paystatus">
+						<text style="color:#f66400">待支付</text>
+					</view>
+				</view>
+				<view class="content-centerview">
+					<view style="width : 70%">
+						<text class="text-time">2020年02月02日-2020年02月03日</text>
+					</view>
+					<view class="countView">
+						<text class="text-timecount">共1晚</text>
+					</view>
+				</view>
+				<view class="content-bottomview">
+					<view class="cell-paytime">
+						<text style="color:#393a39">剩余支付时间 </text>
+						<van-count-down use-slot time="{{ time }}" bind:change="onChange">
+							<text class="time-item">{{ timeData.minutes }}</text>
+              <text class="time-item">:</text>
+							<text class="time-item">{{ timeData.seconds }}</text>
+						</van-count-down>
+					</view>
+					<view class="paybutton">去支付</view>
+				</view>
+			</view>
+		</van-cell-group>
+	</van-tab>
+	<van-tab title="待支付">内容 2</van-tab>
+	<van-tab title="待确认">内容 3</van-tab>
+	<van-tab title="已入住">内容 4</van-tab>
+</van-tabs>
