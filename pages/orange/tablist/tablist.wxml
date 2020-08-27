@@ -1,44 +1,47 @@
 <van-tabs sticky swipeable color="#fc8428">
-	<van-tab title="全部订单">
-
+	<van-tab wx:for="{{titleArray}}" wx:for-index="idx" wx:for-item="tabitem" title="{{tabitem}}">
 		<van-cell-group custom-class="tpb-list">
-			<view class="cell-contentview" wx:for="{{listArray}}" wx:key="*this">
+			<view wx:if="{{(tabitem == '全部订单') || (tabitem == '待支付'  && item.paystatu == 'unpaid') || (tabitem == '已取消'  && item.paystatu == 'canceled') || (tabitem == '已入住'  && item.paystatu == 'finished')}}" class="cell-contentview" wx:for="{{list}}"  
+			data-celldata="{{item}}" bindtap="celldidclick">
 				<view class="content-topview">
-					<cover-image class="cell-image" src="https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2964062487,143696455&fm=58&s=3A63CA1684218D03104BF2DC0200C0BA&bpow=121&bpoh=75"></cover-image>
+					<cover-image class="cell-image" src="{{item.iconurl}}"></cover-image>
 					<view class="cell-detailview">
-						<view style="width : 100%; text-align: left">深圳华子大酒店{{item}} </view>
-						<view style="width : 100%; text-align: left">高级大床房</view>
+						<view style="width : 100%; text-align: left; font-size:18px">{{item.name}}{{index+1}} </view>
+						<view style="width : 100%; text-align: left; font-size:13px">高级大床房</view>
 						<view style="width : 100%; text-align: left">
-							<text style="color:#393a39">￥<text style="color:#f70000">899</text></text>
+							<text style="color:#393a39">￥<text style="color:#f70000">{{item.price}}</text></text>
 						</view>
 					</view>
 					<view class="cell-paystatus">
-						<text style="color:#f66400">待支付</text>
+						<text wx:if="{{item.paystatu == 'unpaid'}}" style="color:#f66400">待支付</text>
+						<text wx:elif="{{item.paystatu == 'finished'}}">已完成</text>
+						<text wx:else style="color:#c0c0c0">已取消</text>
 					</view>
 				</view>
 				<view class="content-centerview">
-					<view style="width : 70%">
-						<text class="text-time">2020年02月02日-2020年02月03日</text>
+					<view style="width : 70%; padding-left:10px">
+						<text class="text-time">{{item.reservetime}}</text>
 					</view>
 					<view class="countView">
-						<text class="text-timecount">共1晚</text>
+						<text class="text-timecount">共{{item.days}}晚</text>
 					</view>
 				</view>
-				<view class="content-bottomview">
+				<view wx:if="{{item.paystatu == 'unpaid'}}" class="content-bottomview">
 					<view class="cell-paytime">
 						<text style="color:#393a39">剩余支付时间 </text>
-						<van-count-down use-slot time="{{ time }}" bind:change="onChange">
-							<text class="time-item">{{ timeData.minutes }}</text>
+						<van-count-down use-slot time="{{ item.paytimeRemaining }}" bind:change="onChange">
+							<text class="time-item">{{timeData.minutes}}</text>
               <text class="time-item">:</text>
-							<text class="time-item">{{ timeData.seconds }}</text>
+							<text class="time-item">{{timeData.seconds}}</text>
 						</van-count-down>
 					</view>
-					<view class="paybutton">去支付</view>
+					<view class="paybutton" data-celldata="{{item}}" bindtap="paymentDidClick">去支付</view>
 				</view>
 			</view>
 		</van-cell-group>
+		<view class="gap"></view>
 	</van-tab>
-	<van-tab title="待支付">内容 2</van-tab>
+	<!-- <van-tab title="待支付">内容 2</van-tab>
 	<van-tab title="待确认">内容 3</van-tab>
-	<van-tab title="已入住">内容 4</van-tab>
+	<van-tab title="已入住">内容 4</van-tab> -->
 </van-tabs>

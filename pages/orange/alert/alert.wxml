@@ -1,32 +1,30 @@
 <view class='top' bindtap='powerDrawer' data-statu="open" data-num='300'>
- <text>向上弹起</text>
+	<text>弹出视图</text>
 </view>
- 
-<view class='top' bindtap='powerDrawer' data-statu="open" data-num='-300'>
- <text>向下弹出</text>
-</view>
- 
- 
- 
+
 <!--遮罩部分-->
-<view class="drawer_screen" wx:if="{{showModalStatus}}" bindtap="powerDrawer" data-statu="close"></view> 
+<view class="drawer_screen" wx:if="{{showModalStatus}}" bindtap="powerDrawer" data-statu="close"></view>
 <!--弹出层内容-->
 <!--使用animation属性指定需要执行的动画-->
-<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}"> 
- <view class='modalBox'>
- <view class='modalQues'>大床房</view>
-  <view class="topband-banner">
-    <swiper indicator-dots="{{indicatorDots}}"
-        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-        <block wx:for="{{background}}" wx:key="*this">
-          <swiper-item>
-            <view class="swiper-item {{item}}"></view>
-          </swiper-item>
-        </block>
-      </swiper>
-  </view>
-  <view class="topband-richtext">
-    <rich-text>1.xxxxxxxx<br/>2.xxxxxxxxxx3.xxxxxxxxxx</rich-text>
-  </view>
- </view>
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+	<view class='modalBox'>
+		<view class="topview">
+			<view class="button-hide"></view>
+			<view class='modalQues'>大床房</view>
+			<cover-image class="button-hide" src="/images/arrow-bottom.png"  bindtap="powerDrawer" data-statu="close"></cover-image>
+		</view>
+
+		<view class="topband-banner">
+			<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+				<block wx:for="{{background}}" wx:key="*this">
+					<swiper-item>
+						<view class="swiper-item {{item}}"></view>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+		<view class="topband-richtext">
+			<rich-text>1.xxxxxxxx<br />2.xxxxxxxxxx3.xxxxxxxxxx</rich-text>
+		</view>
+	</view>
 </view>

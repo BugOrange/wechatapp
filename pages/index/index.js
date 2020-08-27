@@ -4,10 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    active: 0,
   },
   //事件处理函数
   bindViewTap: function() {
@@ -42,6 +39,10 @@ Page({
         }
       })
     }
+  },
+  onChange(event) {
+    // event.detail 的值为当前选中项的索引
+    this.setData({ active: event.detail });
   },
   getUserInfo: function(e) {
     console.log(e)

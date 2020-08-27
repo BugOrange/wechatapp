@@ -10,7 +10,6 @@
   margin-right: 20rpx;
   margin-left: 20rpx;
   margin-top: 20rpx;
-  height: 400rpx;
   background-color: white;
 }
 .content-topview {
@@ -43,6 +42,7 @@
 .cell-image {
   width: 200rpx;
   height: 150rpx;
+  padding-left: 10px;
 }
 .paybutton {
   text-align: center;
@@ -59,6 +59,7 @@
   display: flex;
   width: 70%;
   align-items: center;
+  padding-left: 10px;
 }
 
 .cell-paystatus {
@@ -84,4 +85,10 @@
 
 .time-item {
   color: #fc8221;
+}
+
+.gap {
+  width: 100%;
+  height: 135rpx;
+  background-color: #f5f7fa;
 }
