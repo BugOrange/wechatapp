@@ -1,0 +1,7 @@
+<!--pages/orange/orderdetail/orderdetail.wxml-->
+<view>
+<image style="width : 120px ; height : 70px" src="{{pagemodel.iconurl}}"></image>
+<view>{{pagemodel.name}}</view>
+<view>{{pagemodel.roomLevelname}}</view>
+<view>￥{{pagemodel.price}}</view>
+</view>

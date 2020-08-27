@@ -1,0 +1,9 @@
+<!--pages/orange/payment/payment.wxml-->
+<view class="bg">
+<view>
+<text>{{name}}</text>
+</view>
+<view class="btn-pay">
+  <text style="text-align : center">请支付￥{{price}}</text>
+</view>
+</view>
