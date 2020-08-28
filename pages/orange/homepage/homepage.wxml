@@ -1,2 +1,12 @@
 <!--pages/orange/homepage.wxml-->
-<text>pages/orange/homepage.wxml</text>
+<view class="bg">
+	<tpb-banner class="banner" bind:myevent="homepageevent"></tpb-banner>
+	<view class="indexview"><text>{{index}}</text></view>
+	<tpb-alert> </tpb-alert>
+  <view class="grid">
+  <van-grid column-num="4" custom-class="grid">
+		<van-grid-item icon="photo-o" text="文字" wx:for="{{ 6 }}" />
+	</van-grid>
+  </view>
+	
+</view>

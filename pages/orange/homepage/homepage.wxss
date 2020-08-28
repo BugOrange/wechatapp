@@ -1,1 +1,23 @@
 /* pages/orange/homepage.wxss */
+.bg {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.indexview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100rpx;
+}
+.banner {
+  width: 100%;
+  height: 400rpx;
+}
+.grid {
+  margin-top: 30rpx;
+  width: 100%;
+}
+

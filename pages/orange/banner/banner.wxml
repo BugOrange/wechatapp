@@ -1,0 +1,11 @@
+<!--pages/orange/banner/banner.wxml-->
+
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="width:100%;height:100%" bindchange="bannerindexchange">
+	<block wx:for="{{background}}" wx:key="*this">
+		<swiper-item>
+			<view class="{{item}}">
+				<view><text style="color:#ffffff">{{item}}</text></view>
+			</view>
+		</swiper-item>
+	</block>
+</swiper>

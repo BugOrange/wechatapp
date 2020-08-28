@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "tpb-alert" : "/pages/orange/alert/alert",
+    "tpb-banner" : "/pages/orange/banner/banner",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index"
+  }
 }

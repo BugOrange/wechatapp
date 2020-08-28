@@ -5,7 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    "index" : 'class1'
+  },
 
+  homepageevent: function(e) {
+    this.setData({
+      index : e.detail
+    })
   },
 
   /**

@@ -4,6 +4,7 @@
     "van-tabbar-item": "@vant/weapp/tabbar-item/index",
     "tpb-tablist" : "/pages/orange/tablist/tablist",
     "tpb-alert" : "/pages/orange/alert/alert",
-    "tpb-mine" : "/pages/orange/mine/mine"
+    "tpb-homepage" : "/pages/orange/homepage/homepage",
+    "tpb-newmine" : "/pages/orange/newmine/newmine"
   }
 }

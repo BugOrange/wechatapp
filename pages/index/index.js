@@ -5,7 +5,7 @@ const app = getApp()
 Page({
   data: {
     active: 0,
-    usernickname : ''
+    nickname : '点击登录'
   },
   //事件处理函数
   bindViewTap: function() {
@@ -14,7 +14,9 @@ Page({
     })
   },
   loginaction: function(nickname) {
-    this.data.usernickname = nickname
+    this.setData({
+      nickname : nickname
+    })
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

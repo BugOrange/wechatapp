@@ -1,0 +1,35 @@
+.bg {
+  display: flex;
+  height: 400rpx;
+  width: 100%;
+}
+
+.class1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rebeccapurple;
+  height: 100%;
+  width: 100%;
+}
+
+.class2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: red;
+  height: 100%;
+  width: 100%;
+}
+
+.class3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: green;
+  height: 100%;
+  width: 100%;
+}

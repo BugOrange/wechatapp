@@ -1,12 +1,12 @@
 <!--index.wxml-->
 <view wx:if="{{active == 0}}">
-<tpb-alert></tpb-alert>
+<tpb-homepage></tpb-homepage>
 </view>
 <view wx:elif="{{active == 1}}">
 <tpb-tablist></tpb-tablist>
 </view>
 <view wx:else>
-<tpb-mine nickname="{{usernickname}}"></tpb-mine>
+<tpb-newmine nickname="{{nickname}}"></tpb-newmine>
 </view>
 <van-tabbar active="{{ active }}" bind:change="onChange">
   <van-tabbar-item icon="/images/home.png">首页</van-tabbar-item>
