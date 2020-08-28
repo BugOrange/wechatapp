@@ -5,12 +5,16 @@ const app = getApp()
 Page({
   data: {
     active: 0,
+    usernickname : ''
   },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
     })
+  },
+  loginaction: function(nickname) {
+    this.data.usernickname = nickname
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

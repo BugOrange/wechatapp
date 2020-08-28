@@ -5,7 +5,9 @@
     "pages/orange/alert/alert",
     "pages/orange/tablist/tablist",
     "pages/orange/payment/payment",
-    "pages/orange/orderdetail/orderdetail"
+    "pages/orange/orderdetail/orderdetail",
+    "pages/orange/mine/mine",
+    "pages/orange/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",

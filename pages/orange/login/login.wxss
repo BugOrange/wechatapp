@@ -1,0 +1,17 @@
+/* pages/orange/login/login.wxss */
+.bg {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loginbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 70rpx;
+  border-radius: 35rpx;
+  margin-top: 100rpx;
+  background-color: turquoise;
+}

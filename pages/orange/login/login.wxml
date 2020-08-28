@@ -1,0 +1,30 @@
+<!--pages/orange/login/login.wxml-->
+<view class="bg">
+  <van-cell-group>
+  <van-field
+    label="昵称"
+    model:value="{{nickname}}"
+    placeholder="请输入昵称"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+  <van-field
+    label="用户名"
+    model:value="{{username}}"
+    placeholder="请输入用户名"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+  <van-field
+    label="密码"
+    password="ture"
+    model:value="{{ password }}"
+    placeholder="请输入密码"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+</van-cell-group>
+<view class="loginbtn" bindtap="loginaction">
+  <text style="color : #ffffff">登录</text>
+</view>
+</view>

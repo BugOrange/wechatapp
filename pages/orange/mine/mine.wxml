@@ -1,0 +1,10 @@
+<!--pages/orange/mine/mine.wxml-->
+<view class="bg">
+  <view class="headview" bindtap="headtap">
+    <image class="headimage" src="/images/head.png"></image>
+  </view>
+  <view class="headview" bindtap="headtap">
+    <text style="margin-top : 30px">{{nickname}}</text>
+  </view>
+  
+</view>

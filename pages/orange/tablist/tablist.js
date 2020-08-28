@@ -78,8 +78,10 @@ Page({
         "days" : "1",
         "paytimeRemaining" : "3000"
       },
-    ]
+    ],
+  
   },
+  
 
   celldidclick: function (e) {
     var release = e.currentTarget.dataset['celldata']

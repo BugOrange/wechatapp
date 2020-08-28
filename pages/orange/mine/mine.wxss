@@ -1,0 +1,17 @@
+/* pages/orange/mine/mine.wxss */
+
+.bg {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.headview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.headimage {
+  height: 300rpx;
+  width: 300rpx;
+}
